@@ -1,0 +1,308 @@
+@import "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css";
+
+/* src/components/GNB.module.css */
+.GNB_gnb {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--gray-100);
+  border-bottom: 1px solid var(--gray-400);
+  z-index: 999;
+  font-size: var(--16px);
+  @media (max-width: 744px) {
+    height: 56px;
+  }
+}
+.GNB_gnbContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 1200px;
+  gap: 57px;
+  @media (max-width: 1200px) {
+    margin-left: 24px;
+    gap: 41px;
+  }
+  @media (max-width: 744px) {
+    margin-left: 16px;
+    gap: 24px;
+  }
+}
+.GNB_siteLogo {
+  width: 112px;
+  height: 40px;
+  @media (max-width: 744px) {
+    width: 64px;
+    height: 23px;
+  }
+}
+.GNB_navMenus {
+  display: flex;
+  gap: 34px;
+}
+.GNB_navLinkStyle {
+  text-decoration: none;
+}
+.GNB_menu:hover {
+  color: white;
+}
+
+/* src/components/Pagination.module.css */
+.Pagination_main {
+  width: 100%;
+  background-color: var(--gray-100);
+  color: var(--gray-900);
+  & > * {
+    max-width: 1200px;
+    margin: var(--24px) auto;
+  }
+}
+.Pagination_pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--5px);
+  margin-top: var(--24px);
+  & div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--18px);
+    font-weight: 400;
+    width: var(--48px);
+    height: var(--48px);
+    border-radius: var(--10px);
+    background-color: var(--gray-400);
+    color: var(--gray-700);
+  }
+  & div.Pagination_selected {
+    background-color: var(--prime-orange);
+    color: var(--gray-900);
+  }
+  & div:first-child {
+    margin-right: var(--5px);
+  }
+  & div:last-child {
+    margin-left: var(--5px);
+  }
+}
+
+/* src/pages/CompanyListPage.module.css */
+.CompanyListPage_heads {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  & h2 {
+    margin-bottom: var(--16px);
+  }
+  & .CompanyListPage_keywordAndSortOptions {
+    margin-bottom: var(--16px);
+  }
+}
+.CompanyListPage_keywordAndSortOptions {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--8px);
+  & .CompanyListPage_keywordInputContainer {
+    position: relative;
+    width: 448px;
+    height: 48px;
+    @media (max-width: 1200px) {
+      width: 269px;
+    }
+    & input {
+      position: absolute;
+      inset: 0;
+      font-size: var(--14px);
+      font-weight: 400;
+      border-radius: var(--10px);
+      padding: 12px 12px 12px 48px;
+      background-color: var(--gray-100);
+      color: var(--gray-800);
+      border: 1px solid var(--gray-700);
+    }
+    & img {
+      position: absolute;
+      width: 24px;
+      left: 12px;
+      top: 12px;
+      bottom: 12px;
+      cursor: pointer;
+    }
+  }
+  & select {
+    width: 168px;
+    height: 48px;
+    font-size: var(--14px);
+    font-weight: 400;
+    border-radius: var(--10px);
+    background-color: var(--gray-100);
+    color: var(--gray-800);
+    border: 1px solid var(--gray-700);
+  }
+}
+
+/* src/components/PopUp.module.css */
+.PopUp_popUpWrapper {
+  position: fixed;
+  inset: 0;
+  margin: 0;
+  max-width: unset;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  z-index: 1000;
+}
+.PopUp_popUpContainer {
+  position: relative;
+  background-color: var(--gray-900);
+  color: var(--gray-100);
+  max-width: 540px;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--10px);
+  z-index: 1100;
+}
+.PopUp_popUpText {
+  display: inline-block;
+  font-size: var(--16px);
+  font-weight: 500;
+}
+.PopUp_popUpCloseButton {
+  display: inline-block;
+  position: absolute;
+  right: var(--24px);
+  bottom: var(--24px);
+  background-color: var(--prime-blue);
+  color: var(--gray-800);
+  padding: var(--12px) var(--24px);
+  border-radius: var(--8px);
+  z-index: 1100;
+  pointer-events: all;
+}
+
+/* src/root.css */
+:root {
+  --48px: 3rem;
+  --40px: 2.5rem;
+  --32px: 2rem;
+  --24px: 1.5rem;
+  --20px: 1.25rem;
+  --18px: 1.125rem;
+  --16px: 1rem;
+  --14px: 0.875rem;
+  --13px: 0.8125rem;
+  --12px: 0.75rem;
+  --11px: 0.6875rem;
+  --10px: 0.625rem;
+  --9px: 0.5625rem;
+  --8px: 0.5rem;
+  --7px: 0.4375rem;
+  --6px: 0.375rem;
+  --5px: 0.3125rem;
+  --4px: 0.25rem;
+  --3px: 0.1875rem;
+  --2px: 0.125rem;
+  --1px: 0.0625rem;
+  --gray-900: #ffffff;
+  --gray-800: #d8d8d8;
+  --gray-700: #747474;
+  --gray-600: #4b4b4b;
+  --gray-500: #333333;
+  --gray-400: #2e2e2e;
+  --gray-300: #282828;
+  --gray-200: #212121;
+  --gray-100: #131313;
+  --gray-0: #000000;
+  --red-error: #c41013;
+  --prime-blue: #558fff;
+  --prime-orange: #eb5230;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  background-color: var(--gray-100);
+  color: var(--gray-900);
+  font-family:
+    "Pretendard",
+    "Noto Sans KR",
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+img {
+  box-sizing: content-box;
+  max-width: 100%;
+}
+@media (max-width: 1200px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+}
+@media (max-width: 744px) {
+  html,
+  body {
+    font-size: 12px;
+  }
+}
+.inline {
+  display: inline;
+}
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+.left {
+  text-align: left;
+}
+.fLeft {
+  float: left;
+}
+.fRight {
+  float: right;
+}
+.cBoth {
+  clear: both;
+}
+.bold {
+  font-weight: bold;
+}
+.underline {
+  text-decoration: underline;
+}
+.none {
+  display: none;
+}
+/*# sourceMappingURL=esb-bundle.css.map */

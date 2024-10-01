@@ -1,4 +1,4 @@
-import styles from "../pages/Home.module.css";
+import styles from "./Pagination.module.css";
 
 function Pagination({ pageNum, setPageNum, pageNumMax }) {
   return (
